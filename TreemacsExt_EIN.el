@@ -427,11 +427,11 @@
 	)
   )
 
-(treemacs-tag-follow-mode-add-ext ein
-								  ;; Info-mode
-								  ein-mode
-								  treemacs--tag-match-func-ein
-								  (treemacs--current-tag-path-ein)
-								  treemacs--project-of-extision-ein)
+;; (treemacs-tag-follow-mode-add-ext ein
+;; 								  ;; Info-mode
+;; 								  ein-mode
+;; 								  treemacs--tag-match-func-ein
+;; 								  (treemacs--current-tag-path-ein)
+;; 								  treemacs--project-of-extision-ein)
 
 ;; )
