@@ -426,7 +426,7 @@
 	  )
 	)
   )
-
+(provide 'TreemacsExt_EIN)
 ;; (treemacs-tag-follow-mode-add-ext ein
 ;; 								  ;; Info-mode
 ;; 								  ein-mode
