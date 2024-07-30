@@ -43,19 +43,18 @@
   :closed-icon (treemacs-get-icon-value 'list)
   :children
   (progn
-	(message (format "%s" "test"))
 	(unless (ein:jupyter-server-ready-p)
 	  (ein:jupyter-server-start (executable-find ein:jupyter-server-command)
-								"d:/Study/OpenCV/opencv-python-free-course-code/" t nil))
-	(while (not (ein:jupyter-server-ready-p))
-	  (sleep-for 100))
-	(ein:login (ein:notebooklist-ask-url-or-port)
-			   (lambda (buffer _url-or-port) (pop-to-buffer buffer))
-			   (when current-prefix-arg
-				 (read-no-blanks-input "Cookie name: "))
-			   (when current-prefix-arg
-				 (read-no-blanks-input "Cookie content: "))
-			   nil)
+								"d:/Study/OpenCV/opencv-python-free-course-code/" t nil)
+	  (while (not (ein:jupyter-server-ready-p))
+		(sleep-for 100))
+	  (ein:login (ein:notebooklist-ask-url-or-port)
+				 (lambda (buffer _url-or-port) (pop-to-buffer buffer))
+				 (when current-prefix-arg
+				   (read-no-blanks-input "Cookie name: "))
+				 (when current-prefix-arg
+				   (read-no-blanks-input "Cookie content: "))
+				 nil))
 	(ein:notebooklist-open* "http://127.0.0.1:8888"
 							nil
 							nil
