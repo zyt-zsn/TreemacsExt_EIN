@@ -8,6 +8,7 @@
 (require 'ein-process)
 (require 'ein-notebooklist)
 (require 'ein-cell)
+(require 'TreemacsExt)
 
 (defun treemacs-list-ein-notebook()
   (let* (
